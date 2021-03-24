@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:id="@+id/layout_head"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:background="@drawable/green"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintHeight_percent="0.28"
+       >
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/iv_main_page_icon"
+           android:layout_width="0dp"
+           android:layout_height="0dp"
+           android:layout_marginTop="50dp"
+           android:layout_marginStart="30dp"
+           android:src="@drawable/explore"
+           app:layout_constraintHeight_percent="0.28"
+           app:layout_constraintDimensionRatio="1:1"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent"
+           tools:src="@drawable/explore"
+           />
+
+       <LinearLayout
+           android:id="@+id/layout_title"
+           android:layout_width="wrap_content"
+           android:layout_height="0dp"
+           android:layout_marginStart="10dp"
+           android:gravity="center_vertical"
+           android:orientation="vertical"
+           app:layout_constraintTop_toTopOf="@id/iv_main_page_icon"
+           app:layout_constraintBottom_toBottomOf="@+id/iv_main_page_icon"
+           app:layout_constraintStart_toEndOf="@id/iv_main_page_icon"
+           >
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/shop_name"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Starbucks"
+               android:textColor="@color/white"
+               android:textSize="18sp"
+               app:layout_constraintStart_toEndOf="@+id/account_icon"
+               app:layout_constraintTop_toTopOf="@+id/account_icon" />
+
+           <com.google.android.material.textview.MaterialTextView
+               android:id="@+id/store"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:background="@drawable/store_btn_bg"
+               android:layout_marginTop="5dp"
+               android:paddingStart="10dp"
+               android:paddingTop="2dp"
+               android:paddingEnd="10dp"
+               android:paddingBottom="2dp"
+               android:text="Store"
+               android:textColor="@color/white"
+               android:textSize="12sp"
+               app:layout_constraintBottom_toBottomOf="@+id/account_icon"
+               app:layout_constraintStart_toStartOf="@+id/account_name" />
+
+       </LinearLayout>
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/iv_setting"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/icon_anchor"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="30dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="@id/iv_main_page_icon"
+           />
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/iv_android"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/icon_android"
+           android:layout_marginTop="10dp"
+           android:layout_marginEnd="30dp"
+           app:layout_constraintEnd_toStartOf="@id/iv_setting"
+           app:layout_constraintTop_toTopOf="@id/iv_main_page_icon"
+           />
+
+
+       <com.google.android.material.card.MaterialCardView
+           style="@style/CustomCardViewStyle"
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_marginStart="30dp"
+           android:layout_marginEnd="30dp"
+           app:layout_constraintHeight_percent="0.32"
+           app:layout_constraintTop_toBottomOf="@+id/iv_main_page_icon"
+           app:layout_constraintBottom_toBottomOf="parent"
+           >
+
+           <androidx.constraintlayout.widget.ConstraintLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent">
+
+
+               <androidx.constraintlayout.widget.Guideline
+                   android:id="@+id/guild_w_0_3333"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   app:layout_constraintGuide_percent="0.3333"
+                   />
+
+               <androidx.constraintlayout.widget.Guideline
+                   android:id="@+id/guild_w_0_6666"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   app:layout_constraintGuide_percent="0.6666"
+                   />
+
+               <View
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                   android:background="@color/gray"
+                   app:layout_constraintStart_toStartOf="@id/guild_w_0_3333"
+                   />
+
+
+               <View
+                   android:layout_width="1dp"
+                   android:layout_height="match_parent"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginBottom="5dp"
+                   android:background="@color/gray"
+                   app:layout_constraintStart_toStartOf="@id/guild_w_0_6666"
+                   />
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:gravity="center"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintEnd_toEndOf="@id/guild_w_0_3333"
+                   >
+
+                   <com.google.android.material.textview.MaterialTextView
+                       android:id="@+id/text_active_code"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:drawableTop="@drawable/explore"
+                       android:drawablePadding="5dp"
+                       android:text="@string/active_code"
+                       android:drawableTint="@color/green_8BC34A"
+                       android:textAlignment="center" />
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:gravity="center"
+                   app:layout_constraintStart_toStartOf="@id/guild_w_0_3333"
+                   app:layout_constraintEnd_toEndOf="@id/guild_w_0_6666"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:id="@+id/text_e"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:drawableTop="@drawable/explore"
+                       android:drawablePadding="5dp"
+                       android:text="@string/cooperative_e_commerce"
+                       android:drawableTint="@color/green_8BC34A"
+                       android:textAlignment="center" />
+
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:gravity="center"
+                   app:layout_constraintStart_toStartOf="@id/guild_w_0_6666"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   >
+                   <com.google.android.material.textview.MaterialTextView
+                       android:id="@+id/text_shop"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:drawableTop="@drawable/explore"
+                       android:drawablePadding="5dp"
+                       android:text="@string/huazhong_mall"
+                       android:drawableTint="@color/green_8BC34A"
+                       android:textAlignment="center" />
+
+
+               </LinearLayout>
+
+           </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+       </com.google.android.material.card.MaterialCardView>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tl_coin_tab"
+        style="@style/CustomTabLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/layout_head"
+        app:tabIndicatorColor="@color/blue_2FC1CF"
+        app:tabIndicatorFullWidth="false"
+        />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp_wallet_page_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_coin_tab"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
